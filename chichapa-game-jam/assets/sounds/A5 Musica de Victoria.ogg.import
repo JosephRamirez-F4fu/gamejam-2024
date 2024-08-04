@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://6b5skodlbdqn"
+path="res://.godot/imported/A5 Musica de Victoria.ogg-4396522c71e508065399009246138df5.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/A5 Musica de Victoria.ogg"
+dest_files=["res://.godot/imported/A5 Musica de Victoria.ogg-4396522c71e508065399009246138df5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

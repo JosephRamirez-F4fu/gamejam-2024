@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://gauiaha21utm"
+path="res://.godot/imported/A4 Musica-de-Pelea-reñida-_a-punto-de-ganar-o-perder_.ogg-bcef9b79d8debe8af83fdc9bfc3f37c7.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/A4 Musica-de-Pelea-reñida-_a-punto-de-ganar-o-perder_.ogg"
+dest_files=["res://.godot/imported/A4 Musica-de-Pelea-reñida-_a-punto-de-ganar-o-perder_.ogg-bcef9b79d8debe8af83fdc9bfc3f37c7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

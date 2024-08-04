@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://buu4vgayb0t02"
+path="res://.godot/imported/A3 Musica-cuando-aparecen-los-enemigos.ogg-5d48c6999072f53931ec4ecf39909164.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/A3 Musica-cuando-aparecen-los-enemigos.ogg"
+dest_files=["res://.godot/imported/A3 Musica-cuando-aparecen-los-enemigos.ogg-5d48c6999072f53931ec4ecf39909164.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

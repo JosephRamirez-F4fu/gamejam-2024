@@ -1,0 +1,878 @@
+[gd_scene load_steps=70 format=3 uid="uid://b0n3fee2d1b0w"]
+
+[ext_resource type="Texture2D" uid="uid://wvrv7cjhtwcu" path="res://assets/columnas/bridge_6.png" id="1_eeq7u"]
+[ext_resource type="Texture2D" uid="uid://76ht3efpmjaa" path="res://assets/piso/piso_1.png" id="2_c1tu1"]
+[ext_resource type="Texture2D" uid="uid://dcyoo4wanlhvo" path="res://assets/piso/piso_2.png" id="3_qcu1s"]
+[ext_resource type="Texture2D" uid="uid://bsj34i33cugdn" path="res://assets/piso/piso_3.png" id="4_buviy"]
+[ext_resource type="Texture2D" uid="uid://b4xxfp3v3ho5b" path="res://assets/mundo/rocas/roca 3.png" id="5_t6u7j"]
+[ext_resource type="Texture2D" uid="uid://d2vftqvovklst" path="res://assets/mundo/rocas/roca 5.png" id="6_hg8vk"]
+[ext_resource type="Texture2D" uid="uid://b4gpc5dk78j58" path="res://assets/columnas/marmol_2.png" id="7_nfxwi"]
+[ext_resource type="Texture2D" uid="uid://ulmc3u7ck06j" path="res://assets/columnas/marmol_1.png" id="8_3blcj"]
+[ext_resource type="Texture2D" uid="uid://bwhoyt3s7s5u8" path="res://assets/roquitas/back_rock_1.png" id="9_0ynab"]
+[ext_resource type="Texture2D" uid="uid://c0rwov16pvnhc" path="res://assets/roquitas/back_rock_3.png" id="10_ge72o"]
+[ext_resource type="Texture2D" uid="uid://b6h34fhff5qlc" path="res://assets/mundo/rocas/roca 2.png" id="11_6okmx"]
+[ext_resource type="Texture2D" uid="uid://86rjdvs4lqul" path="res://assets/columnas/suelo.png" id="12_43o86"]
+[ext_resource type="Texture2D" uid="uid://wnx88yckglh3" path="res://assets/columnas/bridge_9.png" id="13_wbj2u"]
+[ext_resource type="Texture2D" uid="uid://cfshsfgwqiib2" path="res://assets/columnas/bridge_7.png" id="14_8perc"]
+[ext_resource type="Texture2D" uid="uid://dhxtq0t446jwb" path="res://assets/columnas/bridge_8.png" id="15_qxypl"]
+[ext_resource type="Texture2D" uid="uid://cftn1xov7k3wh" path="res://assets/mundo/ruinas/columna 1.png" id="16_odwvy"]
+[ext_resource type="Texture2D" uid="uid://3yuvnt0j2yii" path="res://assets/mundo/ruinas/arcos.png" id="17_hn725"]
+[ext_resource type="Texture2D" uid="uid://cppeaau5rldw3" path="res://assets/mundo/plantas selva/helecho.png" id="18_o60g5"]
+[ext_resource type="Texture2D" uid="uid://c6x0kvjexk7tn" path="res://assets/mundo/plantas selva/hoja 1.png" id="19_ow45k"]
+[ext_resource type="Texture2D" uid="uid://cktw7jxlbn4ke" path="res://assets/mundo/plantas selva/hongo 1.png" id="20_bm6f8"]
+[ext_resource type="Texture2D" uid="uid://bqsbebc6ertl2" path="res://assets/mundo/plantas selva/pasto 1.png" id="21_t642n"]
+[ext_resource type="Texture2D" uid="uid://cgi3bjxd36afr" path="res://assets/mundo/plantas selva/pasto 2.png" id="22_j22na"]
+[ext_resource type="Texture2D" uid="uid://bvbp4hfg4rhcg" path="res://assets/mundo/plantas selva/pasto 3.png" id="23_h8kaj"]
+[ext_resource type="Texture2D" uid="uid://c70i4jlmerdxm" path="res://assets/mundo/plantas selva/pasto 4.png" id="24_y718i"]
+[ext_resource type="Texture2D" uid="uid://dc3pfo838qes" path="res://assets/mundo/plantas selva/hongo 2v.png" id="25_334ff"]
+[ext_resource type="Texture2D" uid="uid://b2448cdee0n31" path="res://assets/mundo/rocas selva/pise selva.png" id="26_cly46"]
+[ext_resource type="Texture2D" uid="uid://jd7jke4neu65" path="res://assets/mundo/rocas selva/roca selva 1.png" id="27_sqrhu"]
+[ext_resource type="Texture2D" uid="uid://6nxt42lmnm30" path="res://assets/mundo/plantas selva/hongo 3.png" id="28_5y463"]
+[ext_resource type="Texture2D" uid="uid://clr6clntvstue" path="res://assets/roquitas/back_rock_5.png" id="29_fl1dl"]
+[ext_resource type="Texture2D" uid="uid://bn8n5g80x0nul" path="res://assets/roquitas/back_Rock_6.png" id="30_7wih6"]
+[ext_resource type="Texture2D" uid="uid://bc7fhy0rhqxb4" path="res://assets/mundo/ruinas/columna 2.png" id="31_x8pvy"]
+[ext_resource type="Texture2D" uid="uid://5vtfmk2lmhfv" path="res://assets/mundo/ruinas/suelo de ruinas.png" id="32_w0lbh"]
+[ext_resource type="Texture2D" uid="uid://grf61g6wi4f6" path="res://assets/mundo/plantas selva/hoja 2.png" id="33_5op84"]
+[ext_resource type="PackedScene" uid="uid://vh08w3iktclu" path="res://enemigos/enemigo_1/enemigo_tipo_1.tscn" id="34_68f0i"]
+[ext_resource type="PackedScene" uid="uid://c5140vedybm61" path="res://enemigos/enemigo_tipo_2.tscn" id="35_er0oj"]
+[ext_resource type="PackedScene" uid="uid://dwjgx501oonje" path="res://enemigos/enemigo_3/puas_1.tscn" id="36_j44m5"]
+[ext_resource type="PackedScene" uid="uid://5vtiy6wi42l8" path="res://enemigos/enemigo_3/puas_2.tscn" id="37_q405o"]
+[ext_resource type="PackedScene" uid="uid://b0cvw1qtmyvku" path="res://enemigos/enemigo_3/puas_4.tscn" id="38_f8ikv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1oqht"]
+size = Vector2(1846.56, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu0c6"]
+size = Vector2(682, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6v60"]
+size = Vector2(330.5, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iclxx"]
+size = Vector2(1118.65, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wx0f"]
+size = Vector2(5736.06, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuf4q"]
+size = Vector2(1746.51, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dawwn"]
+size = Vector2(662.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydlub"]
+size = Vector2(703.813, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yimkl"]
+size = Vector2(432.564, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2ksy"]
+size = Vector2(2182, 82.5582)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqlbh"]
+size = Vector2(1765.91, 113.537)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ldvh"]
+size = Vector2(4368.62, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajfij"]
+size = Vector2(4452.78, 219.024)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45yat"]
+size = Vector2(4617.84, 137)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lx0p"]
+size = Vector2(10335, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtwck"]
+size = Vector2(1195.22, 86.5752)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f16vh"]
+size = Vector2(1095.55, 98.5078)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0vql"]
+size = Vector2(676.95, 85.8301)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okb1n"]
+size = Vector2(1027.29, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y83ef"]
+size = Vector2(6134, 283)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e01s1"]
+size = Vector2(2528.13, 52.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7h6t"]
+size = Vector2(243.538, 335.737)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crtul"]
+size = Vector2(3846.72, 119.908)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75x62"]
+size = Vector2(1475, 165)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dktbs"]
+size = Vector2(4053.48, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcvw6"]
+size = Vector2(3378, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2fai"]
+size = Vector2(3351.75, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7oy1"]
+size = Vector2(3414.95, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g72k7"]
+size = Vector2(897.949, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex3h7"]
+size = Vector2(935.098, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ve1vf"]
+size = Vector2(8432.88, 20)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(85, -65)
+metadata/_edit_vertical_guides_ = [-241.0]
+metadata/_edit_horizontal_guides_ = [33.0]
+
+[node name="Bridge6" type="Sprite2D" parent="."]
+position = Vector2(1023, -72)
+rotation = -0.436332
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_eeq7u")
+
+[node name="Piso1" type="Sprite2D" parent="."]
+position = Vector2(17, 2)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_c1tu1")
+
+[node name="Piso2" type="Sprite2D" parent="."]
+position = Vector2(434, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_qcu1s")
+
+[node name="Piso3" type="Sprite2D" parent="."]
+position = Vector2(751, 13)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_buviy")
+
+[node name="Piso4" type="Sprite2D" parent="."]
+position = Vector2(1042, 9)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_c1tu1")
+
+[node name="Piso5" type="Sprite2D" parent="."]
+position = Vector2(1467, 22)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_qcu1s")
+
+[node name="Columna9" type="Sprite2D" parent="."]
+position = Vector2(12989, -995.001)
+rotation = 1.0472
+scale = Vector2(1.20806, 1.1833)
+texture = ExtResource("31_x8pvy")
+
+[node name="Roca3" type="Sprite2D" parent="."]
+position = Vector2(132, 1)
+scale = Vector2(0.0587464, 0.0478992)
+texture = ExtResource("5_t6u7j")
+
+[node name="Roca5" type="Sprite2D" parent="."]
+position = Vector2(188.175, -4.8)
+scale = Vector2(0.0276502, 0.0260504)
+texture = ExtResource("6_hg8vk")
+
+[node name="Marmol3" type="Sprite2D" parent="."]
+position = Vector2(350, -55)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_nfxwi")
+
+[node name="Marmol2" type="Sprite2D" parent="."]
+position = Vector2(304, -19)
+scale = Vector2(0.296519, 0.298745)
+texture = ExtResource("7_nfxwi")
+
+[node name="Marmol1" type="Sprite2D" parent="."]
+position = Vector2(899, -46)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_3blcj")
+
+[node name="BackRock1" type="Sprite2D" parent="."]
+position = Vector2(1298, -79)
+scale = Vector2(0.361778, 0.356832)
+texture = ExtResource("9_0ynab")
+
+[node name="BackRock3" type="Sprite2D" parent="."]
+position = Vector2(1509, -6.99999)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_ge72o")
+
+[node name="Piso6" type="Sprite2D" parent="."]
+position = Vector2(1978, 62)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_c1tu1")
+
+[node name="Bridge7" type="Sprite2D" parent="."]
+position = Vector2(1687.15, -110.45)
+scale = Vector2(0.196541, 0.232818)
+texture = ExtResource("1_eeq7u")
+
+[node name="Marmol4" type="Sprite2D" parent="."]
+position = Vector2(1945, 19)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_3blcj")
+
+[node name="Roca4" type="Sprite2D" parent="."]
+position = Vector2(2179, 29)
+scale = Vector2(0.2, 0.246)
+texture = ExtResource("5_t6u7j")
+
+[node name="BackRock2" type="Sprite2D" parent="."]
+position = Vector2(2483, 50)
+scale = Vector2(0.353555, 0.352019)
+texture = ExtResource("9_0ynab")
+
+[node name="Roca2" type="Sprite2D" parent="."]
+position = Vector2(3179, 2.99998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_6okmx")
+
+[node name="Marmol5" type="Sprite2D" parent="."]
+position = Vector2(3334, -100)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_nfxwi")
+
+[node name="Suelo" type="Sprite2D" parent="."]
+position = Vector2(5187, 10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_43o86")
+
+[node name="Bridge9" type="Sprite2D" parent="."]
+position = Vector2(5279, -451)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("13_wbj2u")
+
+[node name="Suelo2" type="Sprite2D" parent="."]
+position = Vector2(8034, 10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_43o86")
+
+[node name="Bridge10" type="Sprite2D" parent="."]
+position = Vector2(7536, -450)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("13_wbj2u")
+
+[node name="Bridge11" type="Sprite2D" parent="."]
+position = Vector2(10404, 72)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_wbj2u")
+
+[node name="Bridge8" type="Sprite2D" parent="."]
+position = Vector2(12456.5, -195.5)
+scale = Vector2(0.996394, 0.934746)
+texture = ExtResource("14_8perc")
+
+[node name="Bridge12" type="Sprite2D" parent="."]
+position = Vector2(15925, -371)
+scale = Vector2(2, 2)
+texture = ExtResource("14_8perc")
+
+[node name="Bridge13" type="Sprite2D" parent="."]
+position = Vector2(15900, -1959)
+scale = Vector2(1.14162, 1.32297)
+texture = ExtResource("15_qxypl")
+
+[node name="Bridge14" type="Sprite2D" parent="."]
+position = Vector2(20996, -337)
+scale = Vector2(2, 2)
+texture = ExtResource("14_8perc")
+
+[node name="Columna1" type="Sprite2D" parent="."]
+position = Vector2(19563, -2802)
+scale = Vector2(2.77579, 3.25936)
+texture = ExtResource("16_odwvy")
+
+[node name="Columna2" type="Sprite2D" parent="."]
+position = Vector2(21956, -2783)
+scale = Vector2(2.77579, 3.25936)
+texture = ExtResource("16_odwvy")
+
+[node name="Arcos" type="Sprite2D" parent="."]
+position = Vector2(26228, -1802)
+scale = Vector2(1.14479, 1.35672)
+texture = ExtResource("17_hn725")
+
+[node name="Bridge15" type="Sprite2D" parent="."]
+position = Vector2(25970, -308)
+scale = Vector2(2.04207, 1.97034)
+texture = ExtResource("14_8perc")
+
+[node name="Roca6" type="Sprite2D" parent="."]
+position = Vector2(31372, -733)
+texture = ExtResource("11_6okmx")
+
+[node name="Roca7" type="Sprite2D" parent="."]
+position = Vector2(35796, -710)
+texture = ExtResource("11_6okmx")
+flip_h = true
+
+[node name="Helecho" type="Sprite2D" parent="."]
+position = Vector2(35029, -1463)
+texture = ExtResource("18_o60g5")
+
+[node name="Hoja1" type="Sprite2D" parent="."]
+position = Vector2(35525.3, -1191.75)
+scale = Vector2(0.828244, 0.720859)
+texture = ExtResource("19_ow45k")
+
+[node name="Hongo1" type="Sprite2D" parent="."]
+position = Vector2(35148, -778)
+texture = ExtResource("20_bm6f8")
+
+[node name="Pasto1" type="Sprite2D" parent="."]
+position = Vector2(33340, -1114)
+texture = ExtResource("21_t642n")
+
+[node name="Pasto2" type="Sprite2D" parent="."]
+position = Vector2(37292, -842)
+texture = ExtResource("22_j22na")
+
+[node name="Pasto3" type="Sprite2D" parent="."]
+position = Vector2(39761, -1526)
+texture = ExtResource("23_h8kaj")
+
+[node name="Pasto4" type="Sprite2D" parent="."]
+position = Vector2(37964, -1250)
+texture = ExtResource("24_y718i")
+
+[node name="Hoja2" type="Sprite2D" parent="."]
+position = Vector2(42159, -995)
+scale = Vector2(0.689313, 0.780164)
+texture = ExtResource("19_ow45k")
+
+[node name="Hongo2v" type="Sprite2D" parent="."]
+position = Vector2(40927, -1392)
+texture = ExtResource("25_334ff")
+
+[node name="Pasto5" type="Sprite2D" parent="."]
+position = Vector2(31977, -867)
+texture = ExtResource("24_y718i")
+
+[node name="Pasto6" type="Sprite2D" parent="."]
+position = Vector2(33771, -1059)
+texture = ExtResource("21_t642n")
+
+[node name="Hoja3" type="Sprite2D" parent="."]
+position = Vector2(32168, -1291)
+texture = ExtResource("19_ow45k")
+
+[node name="PiseSelva" type="Sprite2D" parent="."]
+position = Vector2(42560, -1059)
+texture = ExtResource("26_cly46")
+
+[node name="Pasto7" type="Sprite2D" parent="."]
+position = Vector2(40504, -1301)
+texture = ExtResource("23_h8kaj")
+
+[node name="Pasto8" type="Sprite2D" parent="."]
+position = Vector2(39355, -1361)
+texture = ExtResource("24_y718i")
+
+[node name="RocaSelva1" type="Sprite2D" parent="."]
+position = Vector2(45881, -1521)
+texture = ExtResource("27_sqrhu")
+
+[node name="Pasto9" type="Sprite2D" parent="."]
+position = Vector2(44011, -872)
+texture = ExtResource("22_j22na")
+
+[node name="Pasto10" type="Sprite2D" parent="."]
+position = Vector2(45053, -1169)
+texture = ExtResource("24_y718i")
+
+[node name="Piso7" type="Sprite2D" parent="."]
+position = Vector2(49166, -906)
+texture = ExtResource("2_c1tu1")
+
+[node name="Hoja4" type="Sprite2D" parent="."]
+position = Vector2(47811, -1129)
+scale = Vector2(0.251535, 0.263293)
+texture = ExtResource("19_ow45k")
+
+[node name="Bridge16" type="Sprite2D" parent="."]
+position = Vector2(48001, -1539)
+texture = ExtResource("15_qxypl")
+
+[node name="Hongo2v2" type="Sprite2D" parent="."]
+position = Vector2(48549, -1139)
+scale = Vector2(0.457798, 0.387324)
+texture = ExtResource("25_334ff")
+
+[node name="Hongo3" type="Sprite2D" parent="."]
+position = Vector2(47983, -1987)
+scale = Vector2(0.409574, 0.248723)
+texture = ExtResource("28_5y463")
+
+[node name="Marmol6" type="Sprite2D" parent="."]
+position = Vector2(49846, -1297)
+scale = Vector2(2.02078, 1.98387)
+texture = ExtResource("8_3blcj")
+
+[node name="Piso8" type="Sprite2D" parent="."]
+position = Vector2(53109, -996)
+texture = ExtResource("3_qcu1s")
+
+[node name="Piso9" type="Sprite2D" parent="."]
+position = Vector2(56015, -1178)
+texture = ExtResource("4_buviy")
+
+[node name="Piso10" type="Sprite2D" parent="."]
+position = Vector2(58442, -1306)
+texture = ExtResource("3_qcu1s")
+
+[node name="BackRock4" type="Sprite2D" parent="."]
+position = Vector2(52203, -1173)
+texture = ExtResource("10_ge72o")
+
+[node name="BackRock5" type="Sprite2D" parent="."]
+position = Vector2(53972, -1137)
+texture = ExtResource("29_fl1dl")
+
+[node name="BackRock6" type="Sprite2D" parent="."]
+position = Vector2(55795, -1263)
+texture = ExtResource("30_7wih6")
+
+[node name="Arcos2" type="Sprite2D" parent="."]
+position = Vector2(62275, -1450)
+texture = ExtResource("17_hn725")
+
+[node name="Columna3" type="Sprite2D" parent="."]
+position = Vector2(61472, -2457)
+texture = ExtResource("16_odwvy")
+
+[node name="Columna4" type="Sprite2D" parent="."]
+position = Vector2(61988, -2793)
+texture = ExtResource("31_x8pvy")
+
+[node name="Columna5" type="Sprite2D" parent="."]
+position = Vector2(62551, -2457)
+texture = ExtResource("16_odwvy")
+
+[node name="Columna6" type="Sprite2D" parent="."]
+position = Vector2(63144, -2799)
+texture = ExtResource("31_x8pvy")
+
+[node name="Columna7" type="Sprite2D" parent="."]
+position = Vector2(63605, -2498)
+texture = ExtResource("16_odwvy")
+
+[node name="Arcos3" type="Sprite2D" parent="."]
+position = Vector2(76035.3, -1572)
+scale = Vector2(1.03605, 1)
+texture = ExtResource("17_hn725")
+
+[node name="SueloDeRuinas" type="Sprite2D" parent="."]
+position = Vector2(77323, -2341)
+texture = ExtResource("32_w0lbh")
+
+[node name="SueloDeRuinas6" type="Sprite2D" parent="."]
+position = Vector2(144931, -4555)
+texture = ExtResource("32_w0lbh")
+
+[node name="Arcos4" type="Sprite2D" parent="."]
+position = Vector2(79423, -1560)
+texture = ExtResource("17_hn725")
+
+[node name="SueloDeRuinas2" type="Sprite2D" parent="."]
+position = Vector2(78033, -2701)
+scale = Vector2(1.0034, 0.98785)
+texture = ExtResource("32_w0lbh")
+
+[node name="SueloDeRuinas3" type="Sprite2D" parent="."]
+position = Vector2(78744, -2345)
+texture = ExtResource("32_w0lbh")
+
+[node name="SueloDeRuinas7" type="Sprite2D" parent="."]
+position = Vector2(146352, -4559)
+texture = ExtResource("32_w0lbh")
+
+[node name="Arcos6" type="Sprite2D" parent="."]
+position = Vector2(77990.4, -3865.13)
+scale = Vector2(0.842012, 0.722202)
+texture = ExtResource("17_hn725")
+
+[node name="SueloDeRuinas4" type="Sprite2D" parent="."]
+position = Vector2(77992, -3051)
+scale = Vector2(0.789144, 0.987383)
+texture = ExtResource("32_w0lbh")
+
+[node name="Arcos5" type="Sprite2D" parent="."]
+position = Vector2(81075, -1571)
+texture = ExtResource("17_hn725")
+
+[node name="SueloDeRuinas5" type="Sprite2D" parent="."]
+position = Vector2(78007.6, -3414.06)
+scale = Vector2(0.694789, 0.975934)
+texture = ExtResource("32_w0lbh")
+
+[node name="Arcos7" type="Sprite2D" parent="."]
+position = Vector2(66025, -1470)
+texture = ExtResource("17_hn725")
+
+[node name="Bridge17" type="Sprite2D" parent="."]
+position = Vector2(66008, -2530)
+texture = ExtResource("13_wbj2u")
+
+[node name="Arcos8" type="Sprite2D" parent="."]
+position = Vector2(69752, -1483)
+texture = ExtResource("17_hn725")
+
+[node name="Marmol7" type="Sprite2D" parent="."]
+position = Vector2(66331, -2208)
+texture = ExtResource("8_3blcj")
+
+[node name="Bridge18" type="Sprite2D" parent="."]
+position = Vector2(69641, -2551)
+texture = ExtResource("15_qxypl")
+
+[node name="Arcos9" type="Sprite2D" parent="."]
+position = Vector2(66025, -1470)
+texture = ExtResource("17_hn725")
+
+[node name="Bridge19" type="Sprite2D" parent="."]
+position = Vector2(72332, -1435)
+texture = ExtResource("1_eeq7u")
+
+[node name="Bridge20" type="Sprite2D" parent="."]
+position = Vector2(73485, -1435)
+texture = ExtResource("1_eeq7u")
+
+[node name="Helecho2" type="Sprite2D" parent="."]
+position = Vector2(66960, -2187)
+scale = Vector2(0.33368, 0.320331)
+texture = ExtResource("18_o60g5")
+
+[node name="Hoja5" type="Sprite2D" parent="."]
+position = Vector2(66331, -2251.25)
+scale = Vector2(0.1987, 0.0977843)
+texture = ExtResource("33_5op84")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(734.719, 30)
+shape = SubResource("RectangleShape2D_1oqht")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1991, 71)
+shape = SubResource("RectangleShape2D_uu0c6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(2498.75, 64)
+shape = SubResource("RectangleShape2D_a6v60")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(3188.68, 4)
+shape = SubResource("RectangleShape2D_iclxx")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(6607.97, -38)
+shape = SubResource("RectangleShape2D_5wx0f")
+
+[node name="Bridge21" type="Sprite2D" parent="."]
+position = Vector2(10176.9, -291.809)
+scale = Vector2(0.232458, 0.169733)
+texture = ExtResource("13_wbj2u")
+
+[node name="Bridge22" type="Sprite2D" parent="."]
+position = Vector2(10947.9, -359)
+scale = Vector2(0.240061, 0.286437)
+texture = ExtResource("13_wbj2u")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(10406.7, -210)
+shape = SubResource("RectangleShape2D_xuf4q")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(10181.8, -360)
+shape = SubResource("RectangleShape2D_dawwn")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(10950.1, -486)
+shape = SubResource("RectangleShape2D_ydlub")
+
+[node name="Columna8" type="Sprite2D" parent="."]
+position = Vector2(11230, -620)
+rotation = 1.0472
+scale = Vector2(0.46178, 0.481919)
+texture = ExtResource("16_odwvy")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(11223.9, -619.487)
+rotation = -0.536499
+shape = SubResource("RectangleShape2D_yimkl")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2(12456, -588)
+shape = SubResource("RectangleShape2D_v2ksy")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
+position = Vector2(13031.9, -1030.76)
+rotation = -0.500914
+shape = SubResource("RectangleShape2D_yqlbh")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
+position = Vector2(15943.7, -1261)
+shape = SubResource("RectangleShape2D_8ldvh")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="."]
+position = Vector2(21018.6, -1133)
+shape = SubResource("RectangleShape2D_ajfij")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="."]
+position = Vector2(26076.1, -1172.5)
+shape = SubResource("RectangleShape2D_45yat")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="."]
+position = Vector2(33768.5, -1069)
+shape = SubResource("RectangleShape2D_3lx0p")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="."]
+position = Vector2(39396, -1223)
+rotation = -0.375391
+shape = SubResource("RectangleShape2D_mtwck")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="."]
+position = Vector2(40407, -1197)
+rotation = 0.487723
+shape = SubResource("RectangleShape2D_f16vh")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="."]
+position = Vector2(41851, -937.784)
+rotation = 0.454061
+shape = SubResource("RectangleShape2D_w0vql")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="."]
+position = Vector2(41080.4, -1114)
+shape = SubResource("RectangleShape2D_okb1n")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="."]
+position = Vector2(47909, -877.5)
+shape = SubResource("RectangleShape2D_y83ef")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="."]
+position = Vector2(43432.9, -763.938)
+shape = SubResource("RectangleShape2D_e01s1")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="."]
+position = Vector2(44811.8, -770.132)
+shape = SubResource("RectangleShape2D_f7h6t")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="."]
+position = Vector2(52948.6, -1033)
+shape = SubResource("RectangleShape2D_crtul")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="."]
+position = Vector2(55640.5, -1161.5)
+shape = SubResource("RectangleShape2D_75x62")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="."]
+position = Vector2(58385.3, -1323)
+shape = SubResource("RectangleShape2D_dktbs")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="."]
+position = Vector2(62256, -1938.5)
+shape = SubResource("RectangleShape2D_rcvw6")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="."]
+position = Vector2(66026.1, -2025)
+shape = SubResource("RectangleShape2D_g2fai")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="."]
+position = Vector2(69762.5, -2029)
+shape = SubResource("RectangleShape2D_g7oy1")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="."]
+position = Vector2(72342, -2063)
+shape = SubResource("RectangleShape2D_g72k7")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="."]
+position = Vector2(73514.5, -2053)
+shape = SubResource("RectangleShape2D_ex3h7")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="."]
+position = Vector2(78492.6, -2139)
+shape = SubResource("RectangleShape2D_ve1vf")
+
+[node name="eneimago_tipo_1" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(4447, -150)
+
+[node name="eneimago_tipo_2" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(4681, -155)
+
+[node name="eneimago_tipo_3" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(5534, -161)
+
+[node name="eneimago_tipo_4" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(5712, -148)
+
+[node name="eneimago_tipo_5" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(5867, -174)
+
+[node name="eneimago_tipo_6" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(6684, -151)
+
+[node name="eneimago_tipo_7" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(9096, -152)
+
+[node name="eneimago_tipo_8" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(8879, -227)
+
+[node name="eneimago_tipo_9" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(10448, -482)
+
+[node name="eneimago_tipo_10" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(11762, -698)
+
+[node name="eneimago_tipo_11" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(12018, -800)
+
+[node name="eneimago_tipo_12" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(12721, -1094)
+
+[node name="eneimago_tipo_13" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(14165, -1391)
+
+[node name="eneimago_tipo_14" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(14643, -1468)
+
+[node name="eneimago_tipo_15" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(14897, -1384)
+
+[node name="eneimago_tipo_16" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(16386, -1513)
+
+[node name="enemigo tipo 2" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(20998, -1266)
+
+[node name="enemigo tipo 3" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(20730, -1267)
+
+[node name="enemigo tipo 4" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(21269, -1281)
+
+[node name="eneimago_tipo_17" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(20868, -1339)
+
+[node name="eneimago_tipo_18" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(21136, -1347)
+
+[node name="eneimago_tipo_19" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(25751, -1371)
+
+[node name="eneimago_tipo_20" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(26592, -1485)
+
+[node name="Area2D" parent="." instance=ExtResource("36_j44m5")]
+position = Vector2(24117, -1358)
+
+[node name="Area2D2" parent="." instance=ExtResource("36_j44m5")]
+position = Vector2(27837, -1334)
+
+[node name="enemigo tipo 5" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(26219, -1260)
+
+[node name="enemigo tipo 6" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(25264, -1280)
+
+[node name="eneimago_tipo_21" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(27315, -1334)
+
+[node name="enemigo tipo 7" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(30735, -1125)
+
+[node name="enemigo tipo 8" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(31515, -1131)
+
+[node name="enemigo tipo 9" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(32279, -1148)
+
+[node name="eneimago_tipo_22" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(33361, -1161)
+
+[node name="eneimago_tipo_23" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(33617, -1300)
+
+[node name="enemigo tipo 10" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(34205, -1120)
+
+[node name="Area2D3" parent="." instance=ExtResource("37_q405o")]
+position = Vector2(39575, -1615)
+rotation = 1.25499
+
+[node name="eneimago_tipo_24" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(41138, -1318)
+
+[node name="eneimago_tipo_25" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(41636, -1215)
+
+[node name="eneimago_tipo_26" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(46139, -1260)
+
+[node name="eneimago_tipo_27" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(45924, -1156)
+
+[node name="enemigo tipo 11" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(48305, -1062)
+
+[node name="enemigo tipo 12" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(48554, -1042)
+
+[node name="eneimago_tipo_28" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(47714, -1132)
+
+[node name="Area2D4" parent="." instance=ExtResource("38_f8ikv")]
+position = Vector2(62763, -2164)
+
+[node name="Area2D5" parent="." instance=ExtResource("37_q405o")]
+position = Vector2(61573, -2103)
+
+[node name="enemigo tipo 13" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(63138, -2051)
+
+[node name="enemigo tipo 14" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(62438, -2041)
+
+[node name="Area2D6" parent="." instance=ExtResource("37_q405o")]
+position = Vector2(65326, -2160)
+
+[node name="Area2D7" parent="." instance=ExtResource("37_q405o")]
+position = Vector2(75039, -2260)
+
+[node name="Area2D8" parent="." instance=ExtResource("37_q405o")]
+position = Vector2(76300, -2250)
+
+[node name="eneimago_tipo_29" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(77132, -2336)
+
+[node name="eneimago_tipo_30" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(75662, -2298)
+
+[node name="eneimago_tipo_31" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(78816, -2346)
+
+[node name="eneimago_tipo_32" parent="." instance=ExtResource("34_68f0i")]
+position = Vector2(78074, -2279)
+
+[node name="enemigo tipo 15" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(76875, -2208)
+
+[node name="enemigo tipo 16" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(77893, -2231)
+
+[node name="enemigo tipo 17" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(79063, -2246)
+
+[node name="enemigo tipo 18" parent="." instance=ExtResource("35_er0oj")]
+position = Vector2(77479, -2198)

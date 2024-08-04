@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bkdsxwumio5y4"
+path="res://.godot/imported/Ataque del personaje.ogg-524d16358cd3e5bcaddc228d138fbbdb.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/Ataque del personaje.ogg"
+dest_files=["res://.godot/imported/Ataque del personaje.ogg-524d16358cd3e5bcaddc228d138fbbdb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

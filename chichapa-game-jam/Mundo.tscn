@@ -1,0 +1,107 @@
+[gd_scene load_steps=14 format=3 uid="uid://cvn2ohnvye0o7"]
+
+[ext_resource type="Texture2D" uid="uid://ccuufefet5qs8" path="res://assets/fondo/back_ground.png" id="1_7dy7w"]
+[ext_resource type="Script" path="res://scripts/Mundo.gd" id="1_32ajb"]
+[ext_resource type="PackedScene" uid="uid://ca83gaaglxobt" path="res://Jugador.tscn" id="2_ny15v"]
+[ext_resource type="Texture2D" uid="uid://cy0ktdco60x6v" path="res://assets/columnas/bridge_1.png" id="2_uewxk"]
+[ext_resource type="Texture2D" uid="uid://buiofukqwdnni" path="res://assets/columnas/bridge_2.png" id="3_cy5pi"]
+[ext_resource type="Texture2D" uid="uid://ddbhh78lbjqqe" path="res://hud/indicador personaje.png" id="4_h2sb8"]
+[ext_resource type="PackedScene" uid="uid://b0n3fee2d1b0w" path="res://level.tscn" id="5_bt6o1"]
+[ext_resource type="Texture2D" uid="uid://2r5o4qjxdlim" path="res://hud/barra de vida corregida.png" id="6_o3g5t"]
+[ext_resource type="Texture2D" uid="uid://lsuwdafvd4ee" path="res://hud/relleno de barra corregida.png" id="7_6w6ol"]
+[ext_resource type="Script" path="res://scripts/barra_vida.gd" id="8_okamu"]
+[ext_resource type="AudioStream" uid="uid://dptiakdhlsomt" path="res://assets/sounds/A2 Musica-Menu-del-juego-y-Momento-tranquilo.ogg" id="10_wj6gx"]
+[ext_resource type="PackedScene" uid="uid://c5140vedybm61" path="res://enemigos/enemigo_tipo_2.tscn" id="11_aphsi"]
+[ext_resource type="PackedScene" uid="uid://vh08w3iktclu" path="res://enemigos/enemigo_1/enemigo_tipo_1.tscn" id="12_kyh2a"]
+
+[node name="Mundo" type="Node2D"]
+script = ExtResource("1_32ajb")
+metadata/_edit_horizontal_guides_ = [731.0]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(20, 10)
+
+[node name="fondo" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+position = Vector2(-2, 2)
+scale = Vector2(0.240367, 0.243243)
+texture = ExtResource("1_7dy7w")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="humo" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0)
+
+[node name="torres" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(665, 424)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_uewxk")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.2, 0)
+
+[node name="torres" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(3840.78, 109.64)
+scale = Vector2(0.539716, 0.596619)
+texture = ExtResource("2_uewxk")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="torres" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(2362, 317)
+scale = Vector2(0.529493, 0.507887)
+texture = ExtResource("3_cy5pi")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Indicador" type="Sprite2D" parent="HUD"]
+position = Vector2(1090, 60)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("4_h2sb8")
+hframes = 3
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HUD" groups=["barra_vida_player"]]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 494.0
+offset_bottom = 61.0
+step = 0.0
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("6_o3g5t")
+texture_progress = ExtResource("7_6w6ol")
+script = ExtResource("8_okamu")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("5_bt6o1")]
+position = Vector2(-483, 651)
+
+[node name="Jugador" parent="." instance=ExtResource("2_ny15v")]
+position = Vector2(-91, 501)
+scale = Vector2(1.6, 1.6)
+
+[node name="Camera2D" type="Camera2D" parent="Jugador"]
+limit_bottom = 700
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+
+[node name="fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_wj6gx")
+autoplay = true
+
+[node name="enemigo tipo 2" parent="." instance=ExtResource("11_aphsi")]
+position = Vector2(3862, 575)
+
+[node name="pajaros" type="CanvasGroup" parent="."]
+
+[node name="eneimago_tipo_1" parent="pajaros" instance=ExtResource("12_kyh2a")]
+position = Vector2(1553, 616)
+
+[node name="eneimago_tipo_2" parent="pajaros" instance=ExtResource("12_kyh2a")]
+position = Vector2(2684, 564)
+
+[connection signal="update_personaje" from="Jugador" to="." method="_on_jugador_update_personaje"]

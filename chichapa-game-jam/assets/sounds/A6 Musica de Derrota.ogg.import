@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c1e1mhlnyoebu"
+path="res://.godot/imported/A6 Musica de Derrota.ogg-836d690c96fb42e66870c0e2e4ee3816.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/A6 Musica de Derrota.ogg"
+dest_files=["res://.godot/imported/A6 Musica de Derrota.ogg-836d690c96fb42e66870c0e2e4ee3816.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

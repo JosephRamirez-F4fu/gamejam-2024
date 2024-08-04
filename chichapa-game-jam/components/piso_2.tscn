@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdnsjita83s7q"]
+
+[ext_resource type="Texture2D" uid="uid://bsj34i33cugdn" path="res://assets/piso/piso_3.png" id="1_jwpus"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5s2q"]
+size = Vector2(1062.5, 35.6772)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ssa7"]
+size = Vector2(559.037, 30)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(0.24, 0)
+scale = Vector2(0.24, 0.24)
+
+[node name="Roca2" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.675)
+texture = ExtResource("1_jwpus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-286.417, -51.1718)
+scale = Vector2(0.999996, 0.999996)
+shape = SubResource("RectangleShape2D_b5s2q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(327.815, -25)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8ssa7")

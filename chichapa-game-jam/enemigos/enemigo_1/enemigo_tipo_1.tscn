@@ -1,0 +1,129 @@
+[gd_scene load_steps=11 format=3 uid="uid://vh08w3iktclu"]
+
+[ext_resource type="Script" path="res://scripts/enemigo_tipo_1.gd" id="1_2ve3k"]
+[ext_resource type="Texture2D" uid="uid://dltm4se60jby1" path="res://assets/enemigos/ave/ave/ave.png" id="2_lah6f"]
+[ext_resource type="AudioStream" uid="uid://cduiwca6aid71" path="res://assets/sounds/Ataque Pajaro.ogg" id="3_ttnki"]
+
+[sub_resource type="Animation" id="Animation_v3amt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_2wurn"]
+resource_name = "disparar"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 5, 5, 1]
+}
+
+[sub_resource type="Animation" id="Animation_cxlfw"]
+resource_name = "morir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 4]
+}
+
+[sub_resource type="Animation" id="Animation_j0f55"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qmjro"]
+_data = {
+"RESET": SubResource("Animation_v3amt"),
+"disparar": SubResource("Animation_2wurn"),
+"morir": SubResource("Animation_cxlfw"),
+"move": SubResource("Animation_j0f55")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1s0xh"]
+size = Vector2(36, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgklh"]
+size = Vector2(104, 36)
+
+[node name="eneimago_tipo_1" type="CharacterBody2D" groups=["enemigo"]]
+script = ExtResource("1_2ve3k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -20)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_lah6f")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Area2D/CollisionShape2D")
+speed_scale = 3.2
+libraries = {
+"": SubResource("AnimationLibrary_qmjro")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-7.23995e-06, -7.00001)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4.99999, -3.63798e-12)
+shape = SubResource("RectangleShape2D_1s0xh")
+
+[node name="ataque" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ttnki")
+bus = &"fx"
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_dgklh")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_entered"]

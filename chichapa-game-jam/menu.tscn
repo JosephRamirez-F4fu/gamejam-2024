@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://cl0jhgaoio1b7"]
+
+[ext_resource type="Texture2D" uid="uid://p1i0cpo5c2o8" path="res://assets/Menu/-_Menu.png" id="1_ga4ka"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_hm2af"]
+[ext_resource type="Texture2D" uid="uid://mmbo1uokgd0n" path="res://assets/Menu/Palabras/Menu_Jugar - opaciodad.png" id="2_2pdj1"]
+[ext_resource type="Texture2D" uid="uid://djar8wv5vh6m3" path="res://assets/Menu/Palabras/Menu_Jugar .png" id="3_58l2y"]
+[ext_resource type="PackedScene" uid="uid://0qjm413dk0df" path="res://efecto.tscn" id="3_qa4my"]
+[ext_resource type="Texture2D" uid="uid://dat5alplkf04w" path="res://assets/Menu/Palabras/Menu_Creditos - opacidad.png" id="4_nuivc"]
+[ext_resource type="AudioStream" uid="uid://dptiakdhlsomt" path="res://assets/sounds/A2 Musica-Menu-del-juego-y-Momento-tranquilo.ogg" id="4_nwtte"]
+[ext_resource type="Texture2D" uid="uid://p7ehrw4dx7e2" path="res://assets/Menu/Palabras/Menu_Creditos.png" id="5_fdfaf"]
+[ext_resource type="Texture2D" uid="uid://bgsutwd8dni1t" path="res://assets/Menu/Palabras/Menu_Salir - opacidad.png" id="6_ugj3b"]
+[ext_resource type="Texture2D" uid="uid://du62uqoh5g1it" path="res://assets/Menu/Palabras/Menu_Salir  .png" id="7_70nnt"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hm2af")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3648.0
+offset_bottom = 2052.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("1_ga4ka")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -261.0
+offset_top = -203.0
+offset_right = 254.0
+offset_bottom = 142.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+theme_override_constants/separation = 15
+
+[node name="jugar" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_2pdj1")
+texture_hover = ExtResource("3_58l2y")
+
+[node name="creditos" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_nuivc")
+texture_hover = ExtResource("5_fdfaf")
+
+[node name="salir" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_ugj3b")
+texture_hover = ExtResource("7_70nnt")
+
+[node name="Node2D" parent="." instance=ExtResource("3_qa4my")]
+
+[node name="fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_nwtte")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/salir" to="." method="_on_salir_pressed"]

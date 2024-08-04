@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkp0lycxafm2r"]
+
+[ext_resource type="Texture2D" uid="uid://b6h34fhff5qlc" path="res://assets/mundo/rocas/roca 2.png" id="1_f8be1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5s2q"]
+size = Vector2(2635.42, 141.667)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(0.24, 0)
+scale = Vector2(0.24, 0.24)
+
+[node name="Roca2" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_f8be1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-56.2088, -108.333)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_b5s2q")

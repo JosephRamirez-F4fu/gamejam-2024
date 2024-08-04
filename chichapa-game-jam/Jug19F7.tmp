@@ -1,0 +1,481 @@
+[gd_scene load_steps=29 format=3 uid="uid://ca83gaaglxobt"]
+
+[ext_resource type="Script" path="res://scripts/Jugador.gd" id="1_s4f3g"]
+[ext_resource type="Texture2D" uid="uid://boclg27x4aih5" path="res://assets/Transformacion.png" id="2_lgj08"]
+[ext_resource type="Texture2D" uid="uid://bhhdj6430ek7w" path="res://assets/jugador/tanque/escudo.png" id="3_r44rj"]
+[ext_resource type="Texture2D" uid="uid://4j4rda4yi3qu" path="res://assets/jugador/curador/aura.png" id="4_ml8f2"]
+[ext_resource type="Texture2D" uid="uid://ccr7ddu072q11" path="res://assets/jugador/curador/salud 1.png" id="5_1a0qx"]
+[ext_resource type="AudioStream" uid="uid://xiwn7pd54psj" path="res://assets/sounds/Curacion.ogg" id="6_hgd5x"]
+[ext_resource type="AudioStream" uid="uid://cbssf0qj1ng6k" path="res://assets/sounds/A1 Boton-de-menu-y-cambio-de-personaje.ogg" id="7_xs1x8"]
+[ext_resource type="AudioStream" uid="uid://b807pldvmkhol" path="res://assets/sounds/Ataque Diabolico.ogg" id="8_g75g6"]
+
+[sub_resource type="Animation" id="Animation_igq2m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("transformacion:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("transformacion:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("transformacion:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a2ql0"]
+resource_name = "flechero_habilidad"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 0]
+}
+
+[sub_resource type="Animation" id="Animation_fxxy0"]
+resource_name = "flechero_jump"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 5, 6, 3]
+}
+
+[sub_resource type="Animation" id="Animation_yyhhf"]
+resource_name = "flechero_walk"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_sq56s"]
+resource_name = "mago_jump"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_8m2i5"]
+resource_name = "mago_walk"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 3, 6]
+}
+
+[sub_resource type="Animation" id="Animation_mo4w3"]
+resource_name = "tanque_jump"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.7, 2.7, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 3]
+}
+
+[sub_resource type="Animation" id="Animation_wi6ne"]
+resource_name = "tanque_walk"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ed8yp"]
+_data = {
+"RESET": SubResource("Animation_igq2m"),
+"flechero_habilidad": SubResource("Animation_a2ql0"),
+"flechero_jump": SubResource("Animation_fxxy0"),
+"flechero_walk": SubResource("Animation_yyhhf"),
+"mago_jump": SubResource("Animation_sq56s"),
+"mago_walk": SubResource("Animation_8m2i5"),
+"tanque_jump": SubResource("Animation_mo4w3"),
+"tanque_walk": SubResource("Animation_wi6ne")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hxul"]
+size = Vector2(40, 40)
+
+[sub_resource type="Animation" id="Animation_184p3"]
+resource_name = "change"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7u7ud"]
+_data = {
+"change": SubResource("Animation_184p3")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7628v"]
+size = Vector2(75, 312.5)
+
+[sub_resource type="Animation" id="Animation_whmdg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_u41kh"]
+resource_name = "escudo"
+
+[sub_resource type="Animation" id="Animation_cops7"]
+resource_name = "proteger"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bp0ya"]
+_data = {
+"RESET": SubResource("Animation_whmdg"),
+"escudo": SubResource("Animation_u41kh"),
+"proteger": SubResource("Animation_cops7")
+}
+
+[sub_resource type="Animation" id="Animation_4penw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-95.8333, -79.1666)]
+}
+
+[sub_resource type="Animation" id="Animation_qmxcx"]
+resource_name = "aura"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961), Color(1, 1, 1, 1), Color(1, 1, 1, 0.501961)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.7, 0.7), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-95.8333, -75), Vector2(-95.8334, -58.3333), Vector2(-95.8333, -75)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_64hxf"]
+_data = {
+"RESET": SubResource("Animation_4penw"),
+"aura": SubResource("Animation_qmxcx")
+}
+
+[node name="Jugador" type="CharacterBody2D"]
+script = ExtResource("1_s4f3g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 5.0
+libraries = {
+"": SubResource("AnimationLibrary_ed8yp")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 40)
+scale = Vector2(0.12, 0.12)
+offset = Vector2(0, -330)
+hframes = 8
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 40)
+scale = Vector2(0.12, 0.12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -254.167)
+scale = Vector2(5, 12.5)
+shape = SubResource("RectangleShape2D_3hxul")
+
+[node name="cooldown" type="Timer" parent="."]
+
+[node name="cooldown_cambio_personaje" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="transformacion" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2, -46)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_lgj08")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="transformacion"]
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_7u7ud")
+}
+
+[node name="escudo_area" type="Area2D" parent="."]
+scale = Vector2(0.24, 0.24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="escudo_area"]
+position = Vector2(129.167, 6.25)
+shape = SubResource("RectangleShape2D_7628v")
+
+[node name="escudo" type="Sprite2D" parent="escudo_area"]
+texture = ExtResource("3_r44rj")
+hframes = 3
+
+[node name="AnimationEscudo" type="AnimationPlayer" parent="escudo_area/escudo"]
+speed_scale = 3.0
+libraries = {
+"": SubResource("AnimationLibrary_bp0ya")
+}
+
+[node name="TiempoEscudo" type="Timer" parent="escudo_area/escudo"]
+wait_time = 7.0
+
+[node name="aura" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 30)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("4_ml8f2")
+hframes = 2
+
+[node name="AnimationAura" type="AnimationPlayer" parent="aura"]
+libraries = {
+"": SubResource("AnimationLibrary_64hxf")
+}
+
+[node name="TiempoAura" type="Timer" parent="aura"]
+wait_time = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="aura"]
+position = Vector2(-95.8333, -79.1666)
+texture = ExtResource("5_1a0qx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="aura"]
+stream = ExtResource("6_hgd5x")
+
+[node name="CambioPersonaje" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_xs1x8")
+
+[node name="ataque_flecha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_g75g6")
+volume_db = -5.0
+
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="cooldown_cambio_personaje" to="." method="_on_cooldown_cambio_personaje_timeout"]
+[connection signal="timeout" from="escudo_area/escudo/TiempoEscudo" to="." method="_on_tiempo_escudo_timeout"]
+[connection signal="timeout" from="aura/TiempoAura" to="." method="_on_tiempo_aura_timeout"]
